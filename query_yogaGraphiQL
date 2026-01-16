@@ -1,0 +1,134 @@
+query getPiesByCategory($category:String){
+  getPies(category: $category) {
+    pies {
+      name
+      category
+      price
+      inStock
+      ...PieInfo
+    }
+  }
+}
+
+
+query getPies {
+  pies {
+    ...PieInfo
+    category
+    id
+  }
+}
+
+mutation myMutation {
+  addPie(input: {name:"New Strawberry Pie", inStock:true, averageRating:5, category:"fruit", price:20, rating: false}){
+    ...PieInfo
+  }
+}
+
+
+
+query myQuery {
+  pies {
+    id
+    name
+    price
+    inStock
+    averageRating
+    category
+  }
+}
+
+fragment PieInfo on Pie {
+  name
+  averageRating
+  price
+  inStock
+}
+query myNewQuery {
+  fruitPies: getPies(category:"fruit") {
+    pies{
+      ...PieInfo
+    }
+    count
+  }
+  seasonalPies: getPies(category:"seasonal") {
+    pies{
+     ...PieInfo
+    }
+    count
+  }
+  cheesecakes: getPies(category:"cheesecake") {
+    pies{
+     ...PieInfo
+    }
+    count
+  }
+}
+
+
+query getPiesByCategory($category:String){
+  getPies(category: $category) {
+    pies {
+      name
+      category
+      price
+      inStock
+      ...PieInfo
+    }
+  }
+}
+
+
+query getPies {
+  pies {
+    ...PieInfo
+    category
+    id
+  }
+}
+
+mutation myMutation {
+  addPie(input: {name:"New Strawberry Pie", inStock:true, averageRating:5, category:"fruit", price:20, rating: false}){
+    ...PieInfo
+  }
+}
+
+
+
+query myQuery {
+  pies {
+    id
+    name
+    price
+    inStock
+    averageRating
+    category
+  }
+}
+
+fragment PieInfo on Pie {
+  name
+  averageRating
+  price
+  inStock
+}
+query myNewQuery {
+  fruitPies: getPies(category:"fruit") {
+    pies{
+      ...PieInfo
+    }
+    count
+  }
+  seasonalPies: getPies(category:"seasonal") {
+    pies{
+     ...PieInfo
+    }
+    count
+  }
+  cheesecakes: getPies(category:"cheesecake") {
+    pies{
+     ...PieInfo
+    }
+    count
+  }
+}
