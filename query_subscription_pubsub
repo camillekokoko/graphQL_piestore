@@ -1,0 +1,23 @@
+mutation myMutation{
+  addPie(input: 
+    {name:"New Chocolate Pie", price:10, inStock:true, averageRating: 5, category: "seaonsal" }) 
+  {
+  id 
+  name 
+  price 
+  inStock 
+  averageRating 
+  category
+  }
+}
+
+subscription myNewPieAdded {
+  pieAdded {
+    price
+    id
+    name
+    category
+    inStock
+    averageRating
+  }
+}
