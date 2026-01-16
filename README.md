@@ -12,3 +12,5 @@ npm i ws graphql-ws
 PORT MGMT:
 lsof -i: 4000
 kill -9 <pid>
+
+This is a self learning material based on GraphQL foundations course. (path: GraphQL-Foundations)
